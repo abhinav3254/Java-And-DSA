@@ -17,5 +17,8 @@ public class Basic {
              ) {
             System.out.println(day);
         }
+
+        System.out.println(week.ordinal());
+        // ordinal returns the position of that particular item
     }
 }
