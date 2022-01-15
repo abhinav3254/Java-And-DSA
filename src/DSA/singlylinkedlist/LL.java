@@ -25,6 +25,17 @@ public class LL {
         System.out.println("End");
     }
 
+    public void addLast (int data) {
+        if(tail == null){
+            System.out.println("Insert an item First");
+            return;
+        }
+        Node node = new Node(data);
+        tail.next = node;
+        tail = node;
+        size++;
+    }
+
     class Node {
         private int data;
         private Node next;

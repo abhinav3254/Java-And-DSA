@@ -11,5 +11,10 @@ public class Main {
 
         ll.display();
 
+        ll.addLast(66);
+        ll.addLast(55);
+
+        ll.display();
+
     }
 }
