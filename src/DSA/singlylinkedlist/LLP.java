@@ -68,6 +68,7 @@ public class LLP {
 
     public void delFirst () {
         head = head.next;
+        size--;
         printData();
     }
 
@@ -78,6 +79,20 @@ public class LLP {
         }
         tail = temp;
         tail.next = null;
+        size--;
+        printData();
+    }
+
+    public void delAtIndex(int index){
+        Node temp = head;
+        Node temp1 = head.next;
+        for (int i = 1; i < index-1; i++) {
+            temp = temp.next;
+            temp1 = temp1.next;
+        }
+        temp.next = temp1.next;
+        temp1.next = null;
+        size--;
         printData();
     }
 

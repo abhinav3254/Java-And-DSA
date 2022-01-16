@@ -32,10 +32,14 @@ public class Main1 {
 //        }
 
         System.out.println();
-        llp.printData();
+//        llp.printData();
 
 //        llp.delFirst();
 
-        llp.delLast();
+//        llp.delLast();
+
+        // here indexing start from 1
+        llp.delAtIndex(2);
+
     }
 }

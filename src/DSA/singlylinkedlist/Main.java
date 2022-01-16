@@ -14,9 +14,13 @@ public class Main {
 //        ll.addLast(66);
 //        ll.addLast(55);
 
-        ll.addAtIndex(25,3);
-        ll.addAtIndex(77,3);
+//        ll.addAtIndex(25,3);
+//        ll.addAtIndex(77,3);
+//
+//        ll.display();
 
+        // here indexing start from zero
+        ll.delete(2);
         ll.display();
 
     }
