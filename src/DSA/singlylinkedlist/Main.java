@@ -11,8 +11,11 @@ public class Main {
 
         ll.display();
 
-        ll.addLast(66);
-        ll.addLast(55);
+//        ll.addLast(66);
+//        ll.addLast(55);
+
+        ll.addAtIndex(25,3);
+        ll.addAtIndex(77,3);
 
         ll.display();
 

@@ -14,7 +14,7 @@ public class LL {
         if(tail == null) {
             tail = head;
         }
-        size +=1;
+        size++;
     }
     public void display () {
         Node temp = head;
@@ -34,6 +34,24 @@ public class LL {
         tail.next = node;
         tail = node;
         size++;
+    }
+
+    public void addAtIndex (int data,int index) {
+        if (index == 0) {
+            addFirst(data);
+            return;
+        } if (index == size) {
+            addLast(data);
+        }
+        Node node = new Node(data);
+        Node temp = head;
+        Node temp1 = head.next;
+        for (int i = 1; i < index-1; i++) {
+            temp = temp.next;
+            temp1 = temp1.next;
+        }
+        temp.next = node;
+        node.next = temp1;
     }
 
     class Node {
