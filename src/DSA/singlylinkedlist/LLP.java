@@ -60,9 +60,25 @@ public class LLP {
             }
             temp.next = node;
             node.next = temp1;
+            size++;
         } catch (Exception e){
             System.out.println("Enter Valid Index");
         }
+    }
+
+    public void delFirst () {
+        head = head.next;
+        printData();
+    }
+
+    public void delLast () {
+        Node temp = head;
+        while(temp.next!=tail) {
+            temp = temp.next;
+        }
+        tail = temp;
+        tail.next = null;
+        printData();
     }
 
     class Node {

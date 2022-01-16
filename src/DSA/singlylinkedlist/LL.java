@@ -52,6 +52,34 @@ public class LL {
         }
         temp.next = node;
         node.next = temp1;
+        size++;
+    }
+
+    public void delFirst(){
+        head = head.next;
+        size--;
+        display();
+
+    }
+
+    public Node get (int index) {
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+
+    public void delLast () {
+        if(size<=1){
+            delFirst();
+            return;
+        }
+        Node secondLast = get(size-2);
+        int val = tail.data;
+        tail = secondLast;
+        tail.next = null;
+        display();
     }
 
     class Node {
