@@ -8,6 +8,10 @@ public class P4 {
             head = node;
         } else {
             Node temp = head;
+
+            // Note here if we write temp!=null, and then we assign temp = temp.next
+            // this will throw a null pointer exception because if temp = null
+            // how can we assign any value to null
             while(temp.next!=null) {
                 temp = temp.next;
             }
