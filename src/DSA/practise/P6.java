@@ -8,14 +8,17 @@ public class P6 {
         Node node = new Node(data);
         if(head==null){
             head = node;
+            tail = node;
         }
         else{
-            tail = node;
-            Node temp = head;
-            while(temp.next!=null){
-                temp = temp.next;
-            }
-            temp.next = node;
+//            tail = node;
+//            Node temp = head;
+//            while(temp.next!=null){
+//                temp = temp.next;
+//            }
+//            temp.next = node;
+            tail.next = node;
+            tail = tail.next;
         }
     }
 
