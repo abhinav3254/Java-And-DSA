@@ -21,6 +21,11 @@ public class D1 {
         head.prev = null;
     }
 
+    public void deleteLast(){
+        tail = tail.prev;
+        tail.next = null;
+    }
+
     public void display() {
         Node temp = head;
         while(temp!=null){
@@ -67,6 +72,11 @@ class AA{
         d1.displayReverse();
 
         d1.deleteBegin();
+
+        d1.display();
+        d1.displayReverse();
+
+        d1.deleteLast();
 
         d1.display();
         d1.displayReverse();
