@@ -16,6 +16,11 @@ public class D1 {
         }
     }
 
+    public void deleteBegin(){
+        head = head.next;
+        head.prev = null;
+    }
+
     public void display() {
         Node temp = head;
         while(temp!=null){
@@ -59,6 +64,11 @@ class AA{
 
         d1.display();
 
+        d1.displayReverse();
+
+        d1.deleteBegin();
+
+        d1.display();
         d1.displayReverse();
     }
 }
