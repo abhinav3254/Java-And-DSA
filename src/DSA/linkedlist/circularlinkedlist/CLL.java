@@ -1,4 +1,4 @@
-package DSA.circularlinkedlist;
+package DSA.linkedlist.circularlinkedlist;
 
 public class CLL {
     private Node head;

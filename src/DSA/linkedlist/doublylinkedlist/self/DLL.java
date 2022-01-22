@@ -1,4 +1,4 @@
-package DSA.doublylinkedlist.self;
+package DSA.linkedlist.doublylinkedlist.self;
 
 public class DLL {
     private Node head;

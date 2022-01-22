@@ -1,4 +1,4 @@
-package DSA.doublylinkedlist.learnt;
+package DSA.linkedlist.doublylinkedlist.learnt;
 
 public class Main {
     public static void main(String[] args) {

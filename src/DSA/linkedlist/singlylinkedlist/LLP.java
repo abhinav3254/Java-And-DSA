@@ -1,4 +1,4 @@
-package DSA.singlylinkedlist;
+package DSA.linkedlist.singlylinkedlist;
 
 public class LLP {
     private Node head;

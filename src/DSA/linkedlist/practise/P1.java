@@ -1,4 +1,4 @@
-package DSA.practise;
+package DSA.linkedlist.practise;
 
 public class P1 {
     private Node head;

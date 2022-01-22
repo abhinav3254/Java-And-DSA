@@ -1,4 +1,4 @@
-package DSA.doublylinkedlist.learnt;
+package DSA.linkedlist.doublylinkedlist.learnt;
 
 public class DLL {
     private Node head;

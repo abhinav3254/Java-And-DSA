@@ -1,4 +1,4 @@
-package DSA.doublylinkedlist.learnt;
+package DSA.linkedlist.doublylinkedlist.learnt;
 
 public class L1 {
     Node head;
