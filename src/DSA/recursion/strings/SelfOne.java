@@ -14,8 +14,9 @@ public class SelfOne {
     }
 
     public static void main(String[] args) {
-        String ans = remove("abhinav","",0);
-        System.out.println(ans);
+//        String ans = remove("abhinav","",0);
+//        System.out.println(ans);
+        System.out.println(remove("abhinav","",0));
 //        String name = "name";
 //        System.out.println(name.length());
     }
