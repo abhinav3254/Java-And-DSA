@@ -13,7 +13,10 @@ public class SubStringOne {
         * v = 6
         * */
 
-        System.out.println(name.substring(1,2));
-        System.out.println(name.substring(0,2));
+//        System.out.println(name.substring(1,2));
+//        System.out.println(name.substring(0,2));
+
+        System.out.println(name.substring(0,1));
+//        System.out.println(name.substring(1));
     }
 }
