@@ -1,6 +1,6 @@
 package DSA.linkedlist.practise;
 
-public class HackerRank1 {
+public class HackerRank2 {
     private Node head;
     private Node tail;
 
@@ -23,21 +23,21 @@ public class HackerRank1 {
         System.out.println("null");
     }
 
-    public void nodeFromTail(int index){
-        int count = 0;
+    public Node addAt(int index,int data) {
+        Node node = new Node(data);
         Node temp = head;
-        while(temp!=null) {
-            count = count + 1;
+        Node helper = head.next;
+        for(int i = 1;i<index;i++){
             temp = temp.next;
+            helper = helper.next;
         }
-        Node temp1 = head;
-        System.out.println(count+" elements in the Linked List");
-        for(int i = 1;i<count-index;i++){
-            temp1 = temp1.next;
-        }
-        System.out.println(temp1.data);
+        temp.next = node;
+        node.next = helper;
+
+        return node;
     }
-    private class Node{
+
+    private class Node {
         private int data;
         private Node next;
 
@@ -47,15 +47,17 @@ public class HackerRank1 {
     }
 }
 
-class A{
+class A2{
     public static void main(String[] args) {
-        HackerRank1 hackerRank1 = new HackerRank1();
-        hackerRank1.addLast(3);
-        hackerRank1.addLast(2);
-        hackerRank1.addLast(1);
-        hackerRank1.addLast(0);
+        HackerRank2 hackerRank2 = new HackerRank2();
 
-        hackerRank1.display();
-        hackerRank1.nodeFromTail(2);
+        hackerRank2.addLast(16);
+        hackerRank2.addLast(3);
+        hackerRank2.addLast(7);
+
+        hackerRank2.display();
+
+        hackerRank2.addAt(2,1);
+        hackerRank2.display();
     }
 }
