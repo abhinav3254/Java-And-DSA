@@ -2,7 +2,7 @@ package DSA.backtracking.maze;
 
 public class GoingDiagonal {
     public static void main(String[] args) {
-        maze("",2,2);
+        maze("",3,3);
         System.out.println(count);
     }
     private static int count = 0;
@@ -19,7 +19,7 @@ public class GoingDiagonal {
             maze(newName+'V',row-1,column);
         }
         if(column>1) {
-            maze(newName+'R',row,column-1);
+            maze(newName+'H',row,column-1);
         }
     }
 }
