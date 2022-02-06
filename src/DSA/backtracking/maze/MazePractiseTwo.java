@@ -2,7 +2,7 @@ package DSA.backtracking.maze;
 
 public class MazePractiseTwo {
     public static void main(String[] args) {
-        maze("",2,2);
+        maze("",4,4);
         System.out.println(count);
     }
     static int count = 0;
