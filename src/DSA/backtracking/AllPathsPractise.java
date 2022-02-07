@@ -1,4 +1,4 @@
-package DSA.backtracking.maze;
+package DSA.backtracking;
 
 public class AllPathsPractise {
     public static void main(String[] args) {
