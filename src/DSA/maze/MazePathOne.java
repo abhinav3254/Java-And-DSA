@@ -1,4 +1,4 @@
-package DSA.backtracking.maze;
+package DSA.maze;
 
 public class MazePathOne {
     public static void main(String[] args) {
