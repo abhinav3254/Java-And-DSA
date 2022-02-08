@@ -14,7 +14,9 @@ public class GFG1 {
 //        ll.deleteAllList();
 //        ll.display();
 
-        ll.delAt(3);
-        ll.display();
+//        ll.delAt(3);
+//        ll.display();
+
+        ll.length();
     }
 }

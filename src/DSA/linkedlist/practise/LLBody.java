@@ -3,7 +3,9 @@ package DSA.linkedlist.practise;
 public class LLBody {
     public Node head;
     Node temp;
+    private int count = 0;
     public void addLast(int data){
+        count++;
         Node node = new Node(data);
         if(head == null){
             head = node;
@@ -36,6 +38,10 @@ public class LLBody {
             temp = temp.next;
         }
         temp.next = temp1.next;
+    }
+
+    public void length(){
+        System.out.println(count);
     }
 
     class Node {
