@@ -56,6 +56,11 @@ public class LLBody {
         System.out.println(val+" occurred "+c+" times");
     }
 
+    public void existsLoop(){
+        Node fast = head;
+
+    }
+
     class Node {
         int data;
         Node next;
