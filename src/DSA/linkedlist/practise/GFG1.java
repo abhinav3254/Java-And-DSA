@@ -8,6 +8,10 @@ public class GFG1 {
         ll.addLast(3);
         ll.addLast(4);
         ll.addLast(5);
+        ll.addLast(3);
+        ll.addLast(3);
+        ll.addLast(3);
+        ll.addLast(3);
 
         ll.display();
 
@@ -18,5 +22,7 @@ public class GFG1 {
 //        ll.display();
 
         ll.length();
+
+        ll.search(3);
     }
 }

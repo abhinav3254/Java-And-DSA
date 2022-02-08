@@ -44,6 +44,18 @@ public class LLBody {
         System.out.println(count);
     }
 
+    public void search(int val) {
+        Node temp = head;
+        int c = 0;
+        while(temp!=null){
+            if(temp.data == val){
+                c++;
+            }
+            temp = temp.next;
+        }
+        System.out.println(val+" occurred "+c+" times");
+    }
+
     class Node {
         int data;
         Node next;
