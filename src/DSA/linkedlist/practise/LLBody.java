@@ -27,6 +27,17 @@ public class LLBody {
     public void deleteAllList(){
         head = null;
     }
+
+    public void delAt(int index){
+        Node temp = head;
+        Node temp1 = head.next;
+        for(int i = 1;i<index-1;i++){
+            temp1 = temp1.next;
+            temp = temp.next;
+        }
+        temp.next = temp1.next;
+    }
+
     class Node {
         int data;
         Node next;

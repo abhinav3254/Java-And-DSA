@@ -11,8 +11,10 @@ public class GFG1 {
 
         ll.display();
 
-        ll.deleteAllList();
-        ll.display();
+//        ll.deleteAllList();
+//        ll.display();
 
+        ll.delAt(3);
+        ll.display();
     }
 }
