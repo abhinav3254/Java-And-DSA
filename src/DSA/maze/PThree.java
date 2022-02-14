@@ -25,7 +25,6 @@ public class PThree {
             allPaths(arr, r, c-1, newName+"L");
         }
 
-
         arr[r][c] = true;
 
     }
