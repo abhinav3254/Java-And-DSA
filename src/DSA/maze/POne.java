@@ -14,10 +14,13 @@ public class POne {
             return;
         }
         if(r > 1) {
-            mazePath(r-1 , c , newName+"D");
+            mazePath(r-1 , c , newName+"V");
         }
         if(c > 1) {
-            mazePath(r , c-1 , newName+"R");
+            mazePath(r , c-1 , newName+"H");
+        }
+        if(r > 1 && c>1) {
+            mazePath(r-1 , c-1 , newName+"D");
         }
     }
     public static int mazePathCount(int r,int c){
