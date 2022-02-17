@@ -1,4 +1,4 @@
-package DSA.trees;
+package DSA.binarytrees;
 
 public class TreePractiseOneMain {
     public static void main(String[] args) {

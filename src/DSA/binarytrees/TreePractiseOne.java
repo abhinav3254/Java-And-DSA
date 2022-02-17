@@ -1,4 +1,4 @@
-package DSA.trees;
+package DSA.binarytrees;
 
 import java.util.Scanner;
 
