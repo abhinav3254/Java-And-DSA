@@ -41,6 +41,17 @@ public class CountNodes {
     }
 
 
+    // Using Different Way Counting Nodes
+    public int countNode2(Node node) {
+        if(node == null) {
+            return 0;
+        }
+        int left = countNode2(node.left);
+        int right = countNode2(node.right);
+
+        return left+right+1;
+    }
+
     class Node {
         Node left;
         int data;
