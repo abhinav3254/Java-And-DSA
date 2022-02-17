@@ -70,8 +70,7 @@ class Main1 {
 
         countNodes.inOrder(node);
 
-        System.out.println("Max Value in the Tree is :- ");
-        System.out.println(countNodes.maxValue(node));
+
 
         System.out.println("Total Node in the tree is :- "+ countNodes.countNode());
     }

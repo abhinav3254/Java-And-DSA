@@ -72,5 +72,7 @@ class Main2 {
         countNodes.inOrder(node);
 
         System.out.println("Total Node in the tree is :- "+ countNodes.countNode());
+
+        System.out.println("Total Node 2nd way output is :- "+countNodes.countNode2(node));
     }
 }
