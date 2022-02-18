@@ -47,6 +47,16 @@ public class BTree {
         postOrder(node.right);
         System.out.print(node.data+" ");
     }
+
+    public int heightOfTree(Node node) {
+        if(node == null) {
+            return 0;
+        }
+        int left = heightOfTree(node.left);
+        int right = heightOfTree(node.right);
+
+        return Math.max(left,right)+1;
+    }
     class Node {
         int data;
         Node left,right;
@@ -64,11 +74,13 @@ class Main4 {
         System.out.println();
         System.out.println("InOrder:- ");
         bTree.inOrder(node);
-        System.out.println();
-        System.out.println("preOrder:- ");
-        bTree.preOrder(node);
-        System.out.println();
-        System.out.println("PostOrder:- ");
-        bTree.postOrder(node);
+//        System.out.println();
+//        System.out.println("preOrder:- ");
+//        bTree.preOrder(node);
+//        System.out.println();
+//        System.out.println("PostOrder:- ");
+//        bTree.postOrder(node);
+
+        System.out.println("Height :- "+bTree.heightOfTree(node));
     }
 }
