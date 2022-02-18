@@ -70,6 +70,8 @@ class Main3 {
         LevelOrderTraversal orderTraversal = new LevelOrderTraversal();
         LevelOrderTraversal.Node node = orderTraversal.createTree();
 
+        System.out.println("Node is :- "+node.data);
+
         System.out.println(orderTraversal.height(node));
 
         orderTraversal.levelOrderTraversal(node);
