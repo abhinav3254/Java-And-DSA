@@ -77,6 +77,18 @@ public class BTree {
         return val;
     }
 
+    public void searchNode(int data,Node node) {
+        if(node == null) {
+            return ;
+        }
+        if(data == node.data) {
+            System.out.println("Found");
+            return;
+        }
+        searchNode(data, node.left);
+        searchNode(data, node.right);
+    }
+
     class Node {
         int data;
         Node left,right;
@@ -104,5 +116,7 @@ class Main4 {
         System.out.println("Height :- "+bTree.heightOfTree(node));
 
         System.out.println("Max in Tree is :- "+bTree.maxInBTree(node));
+
+        bTree.searchNode(5, node);
     }
 }
