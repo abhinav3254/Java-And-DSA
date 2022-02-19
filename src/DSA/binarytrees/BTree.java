@@ -57,6 +57,26 @@ public class BTree {
 
         return Math.max(left,right)+1;
     }
+
+    public int maxInBTree(Node node) {
+        if(node == null) {
+            return 0;
+        }
+
+        var val = node.data;
+        int left = maxInBTree(node.left);
+        int right = maxInBTree(node.right);
+
+        if(left>val) {
+            val = left;
+        }
+        if(right>val) {
+            val = right;
+        }
+
+        return val;
+    }
+
     class Node {
         int data;
         Node left,right;
@@ -82,5 +102,7 @@ class Main4 {
 //        bTree.postOrder(node);
 
         System.out.println("Height :- "+bTree.heightOfTree(node));
+
+        System.out.println("Max in Tree is :- "+bTree.maxInBTree(node));
     }
 }
