@@ -10,6 +10,7 @@ public class CHEFBARBER {
         System.out.println("Enter M Value :- ");
         var m = scanner.nextInt();
         System.out.println(timeTake(n,m));
+        scanner.close();
     }
 
     private static int timeTake(int n, int m) {
