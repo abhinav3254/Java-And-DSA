@@ -1,9 +1,6 @@
 package DSA.binarytrees;
 
 import java.util.Scanner;
-
-import DSA.binarytrees.BTree.Node;
-
 public class NewBTree {
     Scanner sc = new Scanner(System.in);
 
