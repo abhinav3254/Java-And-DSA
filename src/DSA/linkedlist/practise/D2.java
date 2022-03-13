@@ -21,7 +21,7 @@ public class D2 {
         if(temp == null) {
             System.out.println("Linked List Empty");
         }
-        while(temp.next!=null) {
+        while(temp!=null) {
             System.out.print(temp.data+" --> ");
             temp = temp.next;
         }
@@ -34,5 +34,18 @@ public class D2 {
         Node (int data) {
             this.data = data;
         }
+    }
+
+    public static void main(String[] args) {
+        D2 d2 = new D2();
+        d2.insertData(1);
+        d2.insertData(2);
+        d2.insertData(3);
+        d2.insertData(4);
+        d2.insertData(5);
+        d2.insertData(6);
+        d2.insertData(7);
+
+        d2.display();
     }
 }
