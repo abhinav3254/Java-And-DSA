@@ -1,0 +1,23 @@
+package DSA.binarytrees;
+
+public class LevelOrder {
+    
+    funMain(){
+        for(int i = 0;i<heightOfTree;i++) {
+
+        }
+    }
+
+    funHelper(){
+        printAll The nodes at the current level
+        // first condintion
+        if (tree==null) return;
+        // If level is One
+        if (level == 1) {
+            print(tree.data);
+        } else if(level>1) {
+            funHelper(root.left,level-1);
+            funHelper(root.right,level-1);
+        }
+    }
+}

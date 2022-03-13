@@ -58,6 +58,25 @@ public class BTree {
         return Math.max(left,right)+1;
     }
 
+    public void levelOrder (Node node) {
+        int height = heightOfTree(node);
+        for(int i = 0;i<height;i++) {
+            levelOrderHelper(node,i);
+        }
+    }
+
+    private void levelOrderHelper(Node node, int level) {
+        if(node == null) {
+            return;
+        }
+        if(level == 1) {
+            System.out.print(node.data+" ");
+        } else if(level>1) {
+            levelOrderHelper(node.left,level-1);
+            levelOrderHelper(node.right, level-1);
+        }
+    }
+
     public int maxInBTree(Node node) {
         if(node == null) {
             return 0;
@@ -118,5 +137,7 @@ class Main4 {
         System.out.println("Max in Tree is :- "+bTree.maxInBTree(node));
 
         bTree.searchNode(5, node);
+
+        bTree.levelOrder(node);
     }
 }
