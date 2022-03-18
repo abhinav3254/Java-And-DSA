@@ -41,6 +41,25 @@ public class BINTREEONE {
     }
 
     // Level Order Travsersal Starts From Here
+
+    public void levelOrderTravsersal(Node node,int height) {
+        for (int i = 1;i<=height;i++) {
+            levelOrderTravsersalHelper(node,i);
+        }
+    }
+
+    private void levelOrderTravsersalHelper (Node node , int height) {
+        if(node == null) {
+            return;
+        }
+        if(height == 1) {
+            System.out.print(node.data+" ");
+        }
+        else if (height>1) {
+            levelOrderTravsersalHelper(node.left, height-1);
+            levelOrderTravsersalHelper(node.right, height-1);
+        }
+    }
     class Node {
         int data;
         Node left;
@@ -57,6 +76,9 @@ class Main5 {
         BINTREEONE.Node root = b.createTree();
         b.displayTree(root);
         System.out.println();
-        System.out.print(b.heightTree(root)+" is the height of the tree");
+        int height = b.heightTree(root);
+        System.out.print(height+" is the height of the tree");
+
+        b.levelOrderTravsersal(root, height);
     }
 }
