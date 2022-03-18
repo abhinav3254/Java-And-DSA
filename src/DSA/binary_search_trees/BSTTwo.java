@@ -55,7 +55,21 @@ public class BSTTwo {
         return Math.max(left, right) + 1;
     }
 
-    // Find Min Value from the BST
+    // Find Min Value from the BST 
+
+    // Find Max Value from the BST
+
+    public void maxValue(Node node) {
+        if(node == null) {
+            return;
+        } else {
+            while(node.right!=null) {
+                node = node.right;
+            }
+
+            System.out.println(node.data+" is the Max Value in the Tree");
+        }
+    }
 }
 
 class Node {
@@ -81,6 +95,11 @@ class BSTTwoApp {
 
         System.out.println("Level order Travsersal");
         bstTwo.display(root);
+
+        System.out.println();
+        System.out.println("Max Value in the Bst is");
+
+        bstTwo.maxValue(root);
 
     }
 }
