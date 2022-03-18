@@ -55,14 +55,16 @@ public class BINTREETWO {
     }
 
     // Normal Display Method
-    static public void display(Node node) {
-        if(node == null) {
-            return;
-        } 
-        System.out.print(node.data+" ");
-        display(node.left);
-        display(node.right);
-    }
+    // static public void display(Node node) {
+    //     if(node == null) {
+    //         return;
+    //     } 
+    //     System.out.print(node.data+" ");
+    //     display(node.left);
+    //     display(node.right);
+    // }
+
+    
     static class Node {
         int data;
         Node left;
