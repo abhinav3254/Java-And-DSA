@@ -55,19 +55,34 @@ public class BSTTwo {
         return Math.max(left, right) + 1;
     }
 
-    // Find Min Value from the BST 
+    // Find Min Value from the BST
+
+    public void minValue (Node node) {
+        if(node == null ) {
+            return;
+        } else {
+            while(node.left != null) {
+                node = node.left;
+            }
+            System.out.println(node.data+" is the min value");
+        }
+    }
 
     // Find Max Value from the BST
 
+    /*
+     * --> max value in the bst will lie in the right most side of the Tree
+     */
+
     public void maxValue(Node node) {
-        if(node == null) {
+        if (node == null) {
             return;
         } else {
-            while(node.right!=null) {
+            while (node.right != null) {
                 node = node.right;
             }
 
-            System.out.println(node.data+" is the Max Value in the Tree");
+            System.out.println(node.data + " is the Max Value in the Tree");
         }
     }
 }
@@ -97,9 +112,14 @@ class BSTTwoApp {
         bstTwo.display(root);
 
         System.out.println();
-        System.out.println("Max Value in the Bst is");
+        System.out.println("Max Value in the BST is");
 
         bstTwo.maxValue(root);
+
+        System.out.println();
+        System.out.println("Min Value in the BST is");
+
+        bstTwo.minValue(root);
 
     }
 }
