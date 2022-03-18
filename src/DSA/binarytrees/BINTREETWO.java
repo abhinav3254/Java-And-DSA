@@ -37,7 +37,7 @@ public class BINTREETWO {
 
     static public void LevelOrder(Node node,int height) {
         for (int i = 1;i<=height;i++) {
-            helper(node,height);
+            helper(node,i);
         }
     }
 
@@ -54,6 +54,7 @@ public class BINTREETWO {
         }
     }
 
+    // Normal Display Method
     static public void display(Node node) {
         if(node == null) {
             return;
@@ -79,7 +80,7 @@ public class BINTREETWO {
         System.out.println();
         System.out.println("Height Of the tree is:- "+height);
         System.out.println("Level Order From Here");
-        // LevelOrder(node, height);
-        display(node);
+        LevelOrder(node, height);
+        // display(node);
     }
 }
