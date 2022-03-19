@@ -98,15 +98,22 @@ class BSTTwoApp {
         Node root = null;
         BSTTwo bstTwo = new BSTTwo();
 
-        root = bstTwo.insert(root, 8);
-        root = bstTwo.insert(root, 3);
-        root = bstTwo.insert(root, 6);
+        // root = bstTwo.insert(root, 8);
+        // root = bstTwo.insert(root, 3);
+        // root = bstTwo.insert(root, 6);
+        // root = bstTwo.insert(root, 10);
+        // root = bstTwo.insert(root, 4);
+        // root = bstTwo.insert(root, 7);
+        // root = bstTwo.insert(root, 1);
+        // root = bstTwo.insert(root, 14);
+        // root = bstTwo.insert(root, 13);
+
         root = bstTwo.insert(root, 10);
-        root = bstTwo.insert(root, 4);
-        root = bstTwo.insert(root, 7);
+        root = bstTwo.insert(root, 5);
         root = bstTwo.insert(root, 1);
-        root = bstTwo.insert(root, 14);
-        root = bstTwo.insert(root, 13);
+        root = bstTwo.insert(root, 7);
+        root = bstTwo.insert(root, 40);
+        root = bstTwo.insert(root, 50);
 
         System.out.println("Level order Travsersal");
         bstTwo.display(root);
