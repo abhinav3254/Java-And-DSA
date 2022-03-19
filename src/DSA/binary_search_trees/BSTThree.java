@@ -1,5 +1,11 @@
 package DSA.binary_search_trees;
 
+/*
+        10
+        /   \
+        5     40
+        /  \      \
+        1    7      50 */
 public class BSTThree {
 
     public Node insert(Node node ,int data) {
@@ -54,6 +60,18 @@ public class BSTThree {
         return node;
     }
 
+    // Inorder Traversal
+
+    public void inOrder(Node node) {
+        if(node == null) {
+            return;
+        } else {
+            inOrder(node.left);
+            System.out.print(node.data+" ");
+            inOrder(node.right);
+        }
+    }
+
 
     class Node {
         Node left;
@@ -72,6 +90,10 @@ public class BSTThree {
         node = bstThree.insert(node, 40);
         node = bstThree.insert(node, 50);
 
+        System.out.println("Level Order Traversal:-");
         bstThree.display(node);
+        System.out.println();
+        System.out.println("Inorder Traversal");
+        bstThree.inOrder(node);
     }
 }
