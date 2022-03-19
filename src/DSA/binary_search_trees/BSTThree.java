@@ -72,6 +72,23 @@ public class BSTThree {
         }
     }
 
+    // Search For a Val
+
+    public boolean search(Node node,int val) {
+        if(node == null) {
+            return false;
+        } else {
+            if (node.data == val) {
+                return true;
+            } else if (val>node.data) {
+                search(node.right, val);
+            } else if (val<node.data) {
+                search(node.left, val);
+            }
+        }
+        return false;
+    }
+
 
     class Node {
         Node left;
@@ -95,5 +112,12 @@ public class BSTThree {
         System.out.println();
         System.out.println("Inorder Traversal");
         bstThree.inOrder(node);
+        System.out.println();
+        System.out.println("Searching Start Here");
+        if (bstThree.search(node, 10)) {
+            System.out.println("Item Found");
+        } else {
+            System.out.println("Item Not found");
+        }
     }
 }
