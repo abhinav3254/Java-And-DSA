@@ -1,4 +1,4 @@
-package DSA.graph;
+package DSA.graph.adjacencyMatrix;
 
 import java.io.BufferedReader;
 import java.io.IOException;

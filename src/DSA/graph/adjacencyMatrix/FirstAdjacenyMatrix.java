@@ -1,4 +1,4 @@
-package DSA.graph;
+package DSA.graph.adjacencyMatrix;
 
 import java.util.Scanner;
 
