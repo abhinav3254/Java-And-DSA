@@ -12,6 +12,7 @@ interface Vehicle {
     public void Wheels();
     public void starts();
 //    We can define here anything
+//    Nothing can be defined here
 }
 
 class Car implements Vehicle {
