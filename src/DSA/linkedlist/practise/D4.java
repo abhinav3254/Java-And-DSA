@@ -64,6 +64,39 @@ public class D4 {
         size = size+1;
     }
 
+    public void deleteFirst() {
+        head = head.next;
+        size = size-1;
+    }
+
+    public void deleteLast() {
+        Node temp = head;
+        while (temp.next.next!=null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        size = size-1;
+    }
+
+    public void deleteAt(int index) {
+        if(index == 1) {
+            deleteFirst();
+        } else if (index == size) {
+            deleteLast();
+        } else {
+            Node temp = head;
+            Node temp2 = temp.next.next;
+            int i = 2;
+            while (i!=index) {
+                i++;
+                temp = temp.next;
+                temp2 = temp2.next;
+            }
+            temp.next = temp2;
+        }
+        size = size-1;
+    }
+
     public void display() {
         Node temp = head;
         while (temp!=null) {
@@ -89,6 +122,17 @@ public class D4 {
 
         d4.insertAt(5,5050);
 
+
+        d4.display();
+
+        d4.deleteFirst();
+
+        d4.display();
+
+        d4.deleteLast();
+        d4.display();
+
+        d4.deleteAt(4);
         d4.display();
 
         System.out.println("size is :- "+d4.size);
