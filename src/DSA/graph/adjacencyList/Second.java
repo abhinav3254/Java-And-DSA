@@ -46,6 +46,24 @@ public class Second {
         }
     }
 
+    public void DFS(int n) {
+        boolean []already = new boolean[V];
+        DFSUtil(n,already);
+    }
+
+    private void DFSUtil(int n, boolean[] already) {
+        already[n] = true;
+        System.out.print(n+" ");
+
+        for (int i = 0; i < adj[n].size(); i++) {
+            int a = adj[n].get(i);
+            if(!already[a]) {
+                already[a] = true;
+                DFSUtil(a,already);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of vertex");
@@ -64,5 +82,7 @@ public class Second {
         }
 
         second.BFS(0);
+        System.out.println();
+        second.DFS(0);
     }
 }
