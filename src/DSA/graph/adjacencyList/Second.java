@@ -1,14 +1,21 @@
 package DSA.graph.adjacencyList;
 
 import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Second {
 
+
+    private final int V;
     private final LinkedList<Integer> [] adj;
 
+    private final Queue<Integer> queue;
+
     public Second(int v) {
+        this.V = v;
         this.adj = new LinkedList[v];
+        this.queue = new LinkedList<>();
         for (int i = 0; i < v; i++) {
             adj[i] = new LinkedList<>();
         }
@@ -16,6 +23,27 @@ public class Second {
 
     public void addEdge(int s , int d) {
         adj[s].add(d);
+    }
+
+//    BFS Traversal
+
+    public void BFS(int n) {
+        boolean[] index = new boolean[V];
+        index[n] = true;
+        queue.add(n);
+
+        while (queue.size()!=0) {
+            n = queue.poll();
+            System.out.print(n+" ");
+
+            for (int i = 0; i < adj[n].size(); i++) {
+                int a = adj[n].get(i);
+                if(!index[a]) {
+                    index[a] = true;
+                    queue.add(a);
+                }
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -34,5 +62,7 @@ public class Second {
 
             second.addEdge(s, d);
         }
+
+        second.BFS(0);
     }
 }
