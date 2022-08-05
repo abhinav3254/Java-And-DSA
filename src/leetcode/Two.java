@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class Two {
@@ -8,13 +10,21 @@ public class Two {
     public static void main(String[] args) {
         LinkedList<Integer> l1 = new LinkedList<>();
         LinkedList<Integer> l2 = new LinkedList<>();
-        l1.add(2);
-        l1.add(4);
-        l1.add(3);
 
-        l2.add(5);
-        l2.add(6);
-        l2.add(4);
+        int arr1[] = {9,9,9,9,9,9,9};
+        int arr2[] = {9,9,9,9};
+
+        for (int i = 0; i < arr1.length; i++) {
+            l1.add(arr1[i]);
+        }
+
+
+        for (int i = 0; i < arr2.length; i++) {
+            l2.add(arr2[i]);
+        }
+
+        System.out.println(l1);
+        System.out.println(l2);
 
         stuff(l1,l2);
     }
@@ -31,11 +41,18 @@ public class Two {
         int sum = 0;
         for (int i = 0; i < size; i++) {
             sum = l1.get(i)+l2.get(i);
-            if(sum>9) {
-                int rem = sum%10;
-                sum = sum/10;
+            l3.add(sum);
+        }
+        int q = 0;
+        int rem = 0;
+        for (int i = 0; i < size; i++) {
+            if(l3.get(i)>9) {
+                rem = l3.get(i)%10;
+                q = l3.get(i)/10;
+                l3.set(i,rem);
+                int n = l3.get(i+1);
+                l3.set(i+1,n+q);
             }
         }
-        System.out.println(l3);
     }
 }
