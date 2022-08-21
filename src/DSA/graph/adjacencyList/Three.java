@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Three {
     private final int V;
-    private LinkedList<Integer>[] adj;
+    private final LinkedList<Integer>[] adj;
     private final Queue<Integer> queue;
     Three(int edges) {
         this.V = edges;
@@ -23,7 +23,7 @@ public class Three {
     }
 
     public void BFS(int n) {
-        boolean nodes[] = new boolean[V];
+        boolean[] nodes = new boolean[V];
         nodes[n] = true;
         queue.add(n);
 
