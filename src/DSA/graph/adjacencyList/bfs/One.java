@@ -28,8 +28,8 @@ public class One {
             n = queue.poll();
             System.out.print(n+" ");
 
-            for (int i = 0; i < adj[i].size(); i++) {
-                int a = adj[i].get(i);
+            for (int i = 0; i < adj[n].size(); i++) {
+                int a = adj[n].get(i);
                 if(!nodes[a]) {
                     queue.add(a);
                     nodes[a] = true;
@@ -37,6 +37,27 @@ public class One {
             }
         }
     }
+
+    /*
+    * public void BFS(int n) {
+        boolean[] nodes = new boolean[V];
+        nodes[n] = true;
+        queue.add(n);
+
+        while (!queue.isEmpty()) {
+            n = queue.poll();
+            System.out.print(n+" ");
+
+            for (int i = 0; i < adj[n].size(); i++) {
+                int a = adj[n].get(i);
+                if(!nodes[a]) {
+                    queue.add(a);
+                    nodes[a] = true;
+                }
+            }
+        }
+    }
+    * */
 
     public void addEdge(int source , int destination) {
         adj[source].add(destination);
