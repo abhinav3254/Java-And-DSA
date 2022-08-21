@@ -36,7 +36,7 @@ public class One {
             System.out.print(n+" ");
 
             for (int i = 0; i < adj[n].size(); i++) {
-                a = adj[n].get(i);
+                 a = adj[n].get(i);
                 if(!nodes[a]) {
                     nodes[a] = true;
                     queue.add(a);
