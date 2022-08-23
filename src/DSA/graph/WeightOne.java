@@ -16,8 +16,8 @@ public class WeightOne {
     }
 
     static class Graph {
-        private int vertices;
-        private LinkedList<Edge>[] adj;
+        final private int vertices;
+        final private LinkedList<Edge>[] adj;
 
         public Graph (int vertices) {
             this.vertices = vertices;
@@ -36,8 +36,8 @@ public class WeightOne {
         public void printGraph () {
             for (int i = 0; i < vertices; i++) {
                 LinkedList<Edge> list = adj[i];
-                for (int j = 0; j < list.size(); j++) {
-                    System.out.println("vertex is "+i+" is connected with "+list.get(j).destination+" and has weight of "+list.get(j).weight);
+                for (Edge edge : list) {
+                    System.out.println("vertex is " + i + " is connected with " + edge.destination + " and has weight of " + edge.weight);
                 }
             }
         }
