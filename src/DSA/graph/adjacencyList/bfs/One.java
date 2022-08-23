@@ -64,6 +64,7 @@ public class One {
     }
 
     public static void main(String[] args) {
+        long start = System.nanoTime();
         Scanner sc = new Scanner(System.in);
         System.out.println("Number of nodes:- ");
         int nodes = sc.nextInt();
@@ -82,5 +83,9 @@ public class One {
 
         System.out.println("BFS Traversal");
         one.BFS(0);
+
+        System.out.println();
+        long duration = (System.nanoTime()-start)/1000000;
+        System.out.println("Time duration for this code for execution is :- "+duration+"ms");
     }
 }
