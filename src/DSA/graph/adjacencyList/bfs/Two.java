@@ -43,6 +43,8 @@ public class Two {
     }
 
     public static void main(String[] args) {
+
+        long start = System.nanoTime();
         Two two = new Two(6);
 
         two.addEdge(0,1);
@@ -53,5 +55,10 @@ public class Two {
         two.addEdge(3,5);
 
         two.BFS(0);
+
+        System.out.println();
+        long duration = (System.nanoTime()-start)/1000000;
+
+        System.out.println("Time taken to execute this code is "+duration+"ms");
     }
 }
