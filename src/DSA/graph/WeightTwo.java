@@ -45,6 +45,12 @@ public class WeightTwo {
     }
 
     public static void main(String[] args) {
+        Graph graph = new Graph(4);
+        graph.addEdge(0,1,2);
+        graph.addEdge(0,2,1);
+        graph.addEdge(1,3,5);
+        graph.addEdge(2,3,6);
 
+        graph.printGraph();
     }
 }
