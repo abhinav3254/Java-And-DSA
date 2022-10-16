@@ -1,4 +1,4 @@
-package codechef.practise;
+package codechef.START53;
 
 import java.util.Scanner;
 
