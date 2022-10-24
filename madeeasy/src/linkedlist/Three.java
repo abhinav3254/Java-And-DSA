@@ -10,8 +10,11 @@ public class Three {
             this.next = null;
         }
     }
+
+    int listLength = 0;
     Node head = null;
     public void addElement(int data) {
+        listLength++;
         Node node = new Node(data);
 
         if (head == null) {
@@ -22,6 +25,26 @@ public class Three {
                 temp = temp.next;
             }
             temp.next = node;
+        }
+    }
+
+    public void printMiddle() {
+        Node temp = head;
+        int newListLength;
+        if (listLength%2 == 0) {
+            newListLength = listLength/2;
+        } else {
+            newListLength = (listLength+1)/2;
+        }
+        int i = 1;
+
+        while (true) {
+            if (i == newListLength) {
+                System.out.print("Middle element in the list is --> "+temp.data);
+                break;
+            }
+            temp = temp.next;
+            i++;
         }
     }
 
@@ -40,7 +63,11 @@ public class Three {
         three.addElement(20);
         three.addElement(30);
         three.addElement(40);
+        three.addElement(50);
+        three.addElement(60);
 
         three.printList();
+
+        three.printMiddle();
     }
 }
