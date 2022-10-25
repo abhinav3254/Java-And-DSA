@@ -48,6 +48,10 @@ public class Three {
         }
     }
 
+//    Delete those items whose sum is zero
+
+//    public void sumZeroDe
+
     public void printList() {
         Node temp = head;
         while (temp!=null) {
