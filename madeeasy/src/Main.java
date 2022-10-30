@@ -3,5 +3,6 @@ public class Main {
         System.out.println("Hello world!");
 System.out.println("Hello made easy");
 System.out.println("Hello made easy 29 oct 2022");
+System.out.println("Hello made easy 30 oct 2022");
     }
 }
