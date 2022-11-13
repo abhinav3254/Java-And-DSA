@@ -7,7 +7,7 @@ public class One {
 //        Thread.sleep(3000);
         // ---- program
 
-        for (int i = 0; i < 100; i++) {ch
+        for (int i = 0; i < 100; i++) {
 //            System.out.print("H");
             for (int j = 0; j < 100; j++) {
                 
