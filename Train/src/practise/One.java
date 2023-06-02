@@ -28,6 +28,17 @@ public class One {
 
         dog.show();
         dog1.show();
+
+        Rectangle rectangle1 = new Rectangle();
+        Rectangle rectangle = new Rectangle();
+
+        System.out.println("Rectangle");
+
+        rectangle.calArea(10,10);
+        rectangle.calPerimeter(10,10);
+
+        rectangle1.calArea(15,5);
+        rectangle1.calPerimeter(15,5);
     }
 }
 class Person {
@@ -67,4 +78,20 @@ class Dog {
     public void show() {
         System.out.println("Name is :- "+name+" and Breed is :- "+breed);
     }
+}
+
+// 3. Write a Java program to create a class called "Rectangle" with width and height attributes. Calculate the area and perimeter of the rectangle.
+
+class Rectangle {
+    int width;
+    int height;
+
+    public void calArea (int width,int height) {
+        System.out.println("area is :- "+(width*height));
+    }
+
+    public void calPerimeter (int width, int height) {
+        System.out.println("Perimeter is :- "+(2*(width+height)));
+    }
+
 }
