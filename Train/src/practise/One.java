@@ -39,6 +39,13 @@ public class One {
 
         rectangle1.calArea(15,5);
         rectangle1.calPerimeter(15,5);
+
+        System.out.println("Circle");
+
+        Circle circle = new Circle(10);
+        circle.calArea();
+        circle.calPerimeter();
+
     }
 }
 class Person {
@@ -94,4 +101,22 @@ class Rectangle {
         System.out.println("Perimeter is :- "+(2*(width+height)));
     }
 
+}
+// 4. Write a Java program to create a class called "Circle" with a radius attribute. You can access and modify this attribute.
+// Calculate the area and circumference of the circle.
+
+class Circle {
+    int radius;
+
+    Circle (int radius) {
+        this.radius = radius;
+    }
+
+    public void calArea () {
+        System.out.println("area is :- "+(3.14*radius*radius));
+    }
+
+    public void calPerimeter () {
+        System.out.println("Perimeter is:- "+(2*3.14*radius));
+    }
 }
