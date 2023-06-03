@@ -33,7 +33,6 @@ public class One {
         Rectangle rectangle = new Rectangle();
 
         System.out.println("Rectangle");
-
         rectangle.calArea(10,10);
         rectangle.calPerimeter(10,10);
 
