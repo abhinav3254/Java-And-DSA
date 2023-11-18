@@ -3,6 +3,7 @@ package teach.linkedlist;
 public class First {
 
     private Node head = null;
+    static int count = 0;
 
     public Node addData(int data) {
         Node node = new Node(data);
@@ -13,6 +14,7 @@ public class First {
             head = node;
         }
 
+        count++;
         return node;
     }
 
@@ -34,6 +36,8 @@ public class First {
         node = first.addData(50);
 
         first.printData(node);
+
+        System.out.println("Length of the Linked List-> "+count);
     }
 }
 
