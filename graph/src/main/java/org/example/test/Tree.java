@@ -33,11 +33,20 @@ public class Tree {
         printTree(node.right);
     }
 
+    public static void inorder(Node node) {
+        if (node == null) return;
+        inorder(node.left);
+        System.out.println(node.data);
+        inorder(node.right);
+    }
+
     public static void main(String[] args) {
         sc = new Scanner(System.in);
 
         Node node = createTree();
-        printTree(node);
+//        printTree(node);
+
+        inorder(node);
 
     }
 
