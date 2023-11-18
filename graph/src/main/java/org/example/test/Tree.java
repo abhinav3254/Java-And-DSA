@@ -40,13 +40,35 @@ public class Tree {
         inorder(node.right);
     }
 
+    public static void postOrder(Node node) {
+        if (node == null) return;
+
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.data);
+    }
+
+    public static void preOrder(Node node) {
+        if (node == null) return;
+        System.out.println(node.data);
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
     public static void main(String[] args) {
         sc = new Scanner(System.in);
 
         Node node = createTree();
 //        printTree(node);
 
+        System.out.println("inorder LDR");
         inorder(node);
+        System.out.println();
+        System.out.println("postorder LRD");
+        postOrder(node);
+        System.out.println();
+        System.out.println("preorder RLD");
+        preOrder(node);
 
     }
 
