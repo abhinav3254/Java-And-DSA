@@ -1,4 +1,4 @@
-package org.example.ll;
+package org.example.ll.singly;
 
 public class One<T> {
 
